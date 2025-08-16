@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Build ML Project",
+      "command": "C:/msys64/ucrt64/bin/g++.exe",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "main.cpp",
+        "src/ReadCSV.cpp",
+        "src/LinReg.cpp",
+        "src/tt_split.cpp",
+        "-Iinclude",
+        "-o",
+        "main.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds all source files for ML project."
+    }
+  ]
+}
